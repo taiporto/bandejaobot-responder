@@ -1,7 +1,6 @@
 ﻿import tweepy
 import re
 import csv
-import authenticationkeys as ak
 import cardapiogetter as cg
 import datetime as dt
 import os.path
