@@ -59,7 +59,7 @@ def postAnswerTweets(tweetsCampus, user, idstring):
 
 def searchAndAnswer():
 
-    myMentions = api.mentions_timeline(count=60)
+    myMentions = api.mentions_timeline(count=30)
 
     for mention in myMentions:
 
@@ -112,5 +112,5 @@ def searchAndAnswer():
 while True:
     searchAndAnswer()
     print("done. Sleeping...")
-    time.sleep(300)
+    time.sleep(180)
     print("end of sleep")
