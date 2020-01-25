@@ -1,5 +1,4 @@
 ﻿import cardapioformatter as cf
-# import ak2
 import re
 import tweepy
 import time
@@ -11,17 +10,13 @@ CONSUMER_SECRET = environ['CONSUMER_SECRET']
 TOKEN = environ['TOKEN']
 TOKEN_SECRET = environ['TOKEN_SECRET']
 
-# Authenticate to Twitter
-# auth = tweepy.OAuthHandler(ak.CONSUMER_KEY, ak.CONSUMER_SECRET)
-# auth.set_access_token(ak.TOKEN, ak.TOKEN_SECRET)
-
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(TOKEN, TOKEN_SECRET)
 
 # Create API object
 api = tweepy.API(auth)
 
-botUser = '@antifakebot'
+botUser = '@bandejaobotufrj'
 
 
 strings_ifcspv = cf.getCardapioCampus("IFCSPV")
