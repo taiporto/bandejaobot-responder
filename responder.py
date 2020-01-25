@@ -64,7 +64,7 @@ def postAnswerTweets(tweetsCampus, user, idstring):
 
 def searchAndAnswer():
 
-    myMentions = api.mentions_timeline(count=200)
+    myMentions = api.mentions_timeline(count=60)
 
     for mention in myMentions:
 
