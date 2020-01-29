@@ -69,6 +69,7 @@ def searchAndAnswer():
             jantar = re.search(r"\bjantar\b", mention.text, re.IGNORECASE)
             fundao = re.search(r"\bfund(a|ã)o\b", mention.text, re.IGNORECASE)
             pvifcs = re.search(r"\b(pv|ifcs|praia vermelha)\b", mention.text, re.IGNORECASE)
+            cardapio = re.search(r"\bcard(a|á)pio\b", mention.text, re.IGNORECASE)
 
             if fundao:
                 if almoco:
@@ -77,7 +78,7 @@ def searchAndAnswer():
                 elif jantar:
                     postAnswerTweets(
                         strings_fundao[1], mention.user, mention.id_str)
-                else:
+                elif cardapio:
                     postAnswerTweets(
                         strings_fundao, mention.user, mention.id_str)
                 api.create_favorite(mention.id)
@@ -89,7 +90,7 @@ def searchAndAnswer():
                 elif jantar:
                     postAnswerTweets(
                         strings_ifcspv[1], mention.user, mention.id_str)
-                else:
+                elif cardapio:
                     postAnswerTweets(
                         strings_ifcspv, mention.user, mention.id_str)
                 api.create_favorite(mention.id)
