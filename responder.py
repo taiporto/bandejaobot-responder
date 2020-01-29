@@ -68,7 +68,7 @@ def searchAndAnswer():
             almoco = re.search(r"\balmo(ç|c)o\b", mention.text, re.IGNORECASE)
             jantar = re.search(r"\bjantar\b", mention.text, re.IGNORECASE)
             fundao = re.search(r"\bfund(a|ã)o\b", mention.text, re.IGNORECASE)
-            pvifcs = re.search(r"\b(pv|ifcs)\b", mention.text, re.IGNORECASE)
+            pvifcs = re.search(r"\b(pv|ifcs|praia vermelha)\b", mention.text, re.IGNORECASE)
 
             if fundao:
                 if almoco:
@@ -112,5 +112,5 @@ def searchAndAnswer():
 while True:
     searchAndAnswer()
     print("done. Sleeping...")
-    time.sleep(180)
+    time.sleep(120)
     print("end of sleep")
