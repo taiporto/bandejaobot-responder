@@ -78,7 +78,7 @@ def searchAndAnswer():
                 elif jantar:
                     postAnswerTweets(
                         strings_fundao[1], mention.user, mention.id_str)
-                elif cardapio:
+                elif:
                     postAnswerTweets(
                         strings_fundao, mention.user, mention.id_str)
                 api.create_favorite(mention.id)
@@ -90,7 +90,7 @@ def searchAndAnswer():
                 elif jantar:
                     postAnswerTweets(
                         strings_ifcspv[1], mention.user, mention.id_str)
-                elif cardapio:
+                elif:
                     postAnswerTweets(
                         strings_ifcspv, mention.user, mention.id_str)
                 api.create_favorite(mention.id)
